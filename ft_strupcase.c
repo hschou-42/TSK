@@ -6,7 +6,7 @@
 /*   By: hschou <hschou@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 22:26:42 by hschou            #+#    #+#             */
-/*   Updated: 2019/07/18 22:33:55 by hschou           ###   ########.fr       */
+/*   Updated: 2019/07/18 22:40:59 by hschou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strupcase(char *str)
 	while (str[i] != '\0')
 	{
 		if ('a' <= str[i] && str[i] <= 'z')
-			str[i] = str[i] -32;
+			str[i] = str[i] - 32;
 		i++;
 	}
 	return (str);
