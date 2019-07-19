@@ -6,7 +6,7 @@
 /*   By: hschou <hschou@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 23:27:43 by hschou            #+#    #+#             */
-/*   Updated: 2019/07/18 23:27:49 by hschou           ###   ########.fr       */
+/*   Updated: 2019/07/19 10:02:20 by hschou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,15 @@ char	*ft_strcapitalize(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if	(					 (str[i - 1] < '0'   ||
-			('9' < str[i - 1]  && str[i - 1] < 'A' ) ||
-			('Z' < str[i - 1]  && str[i - 1] < 'a' ) ||
-			 'z' < str[i - 1])
-							   &&
-				('a' <= str[i] && str[i] <= 'z')	)
+		if ((str[i - 1] < '0' ||
+				('9' < str[i - 1] && str[i - 1] < 'A') ||
+				('Z' < str[i - 1] && str[i - 1] < 'a') ||
+				'z' < str[i - 1]) &&
+				('a' <= str[i] && str[i] <= 'z'))
 			str[i] -= 32;
-		else if (( ('A' <= str[i - 1] && str[i - 1] <= 'Z') ||
-				  ('a' <= str[i - 1] && str[i - 1] <= 'z') )
-									 &&
-					  ('A' <= str[i] && str[i] <= 'Z')		)
+		else if ((('A' <= str[i - 1] && str[i - 1] <= 'Z') ||
+				('a' <= str[i - 1] && str[i - 1] <= 'z')) &&
+				('A' <= str[i] && str[i] <= 'Z'))
 			str[i] += 32;
 		i++;
 	}

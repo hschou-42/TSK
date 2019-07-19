@@ -6,7 +6,7 @@
 /*   By: hschou <hschou@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 23:58:12 by hschou            #+#    #+#             */
-/*   Updated: 2019/07/19 00:21:39 by hschou           ###   ########.fr       */
+/*   Updated: 2019/07/19 09:55:58 by hschou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ int		ft_str_is_alpha(char *str)
 	alpha = 1;
 	while (str[i] != '\0')
 	{
-		if (('\0'< str[i] && str[i] < 'A') || ('Z' < str[i] && str[i] < 'a') || 'z' < str[i])
+		if (('\0' < str[i] && str[i] < 'A') ||
+			('Z' < str[i] && str[i] < 'a') || 'z' < str[i])
 		{
 			alpha = 0;
 			break ;
