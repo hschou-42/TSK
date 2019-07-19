@@ -6,33 +6,31 @@
 /*   By: hschou <hschou@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 17:08:50 by hschou            #+#    #+#             */
-/*   Updated: 2019/07/18 21:11:40 by hschou           ###   ########.fr       */
+/*   Updated: 2019/07/18 21:25:55 by hschou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_atoi(char *str)
 {
-	int i;
 	int sign;
 	int n;
 
-	i = 0;
 	sign = 1;
 	n = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
-			str[i] == '\v' || str[i] == '\f' || str[i] == '\r')
-		i++;
-	if (str[i] == '-')
+	while (*str == ' ' || *str == '\t' || *str == '\n' ||
+			*str == '\v' || *str == '\f' || *str == '\r')
+		str++;
+	if (*str == '-')
 	{
 		sign = -1;
-		i += 1;
+		str += 1;
 	}
-	if (str[i] == '+')
-		i += 1;
-	while ('0' <= str[i] && str[i] <= '9')
+	if (*str == '+')
+		str += 1;
+	while ('0' <= *str && *str <= '9')
 	{
-		n = 10 * n + str[i] - '0';
-		i++;
+		n = 10 * n + *str - '0';
+		str++;
 	}
 	return (sign * n);
 }
