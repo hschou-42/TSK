@@ -6,7 +6,7 @@
 /*   By: hschou <hschou@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/18 22:40:34 by hschou            #+#    #+#             */
-/*   Updated: 2019/07/18 22:41:54 by hschou           ###   ########.fr       */
+/*   Updated: 2019/07/18 22:53:30 by hschou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strlowcase(char *str)
 	while (str[i] != '\0')
 	{
 		if ('A' <= str[i] && str[i] <= 'Z')
-			str[i] = str[i] + 32;
+			str[i] += 32;
 		i++;
 	}
 	return (str);
