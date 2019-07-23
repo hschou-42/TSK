@@ -6,11 +6,9 @@
 /*   By: hschou <hschou@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/20 11:28:11 by hschou            #+#    #+#             */
-/*   Updated: 2019/07/22 20:54:57 by hschou           ###   ########.fr       */
+/*   Updated: 2019/07/22 20:57:15 by hschou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
