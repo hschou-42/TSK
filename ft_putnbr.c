@@ -6,22 +6,17 @@
 /*   By: hschou <hschou@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 13:25:44 by hschou            #+#    #+#             */
-/*   Updated: 2019/07/23 20:17:59 by hschou           ###   ########.fr       */
+/*   Updated: 2019/07/27 22:29:13 by hschou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-
-void	ft_putstr(char *str);
+#include <unistd.h>
 
 void	ft_putnbr(int nb)
 {
 	if (nb == -2147483648)
-	{
-		ft_putstr("-2147483648");
-		return ;
-	}
-	if (nb < 0)
+		write(1, "-2147483648", 11);
+	else if (nb < 0)
 	{
 		ft_putchar('-');
 		nb = -nb;
