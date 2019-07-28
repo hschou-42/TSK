@@ -6,11 +6,9 @@
 /*   By: hschou <hschou@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 00:49:52 by hschou            #+#    #+#             */
-/*   Updated: 2019/07/19 00:59:58 by hschou           ###   ########.fr       */
+/*   Updated: 2019/07/24 11:17:36 by hschou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-void	ft_putnbr(int nb);
 
 int		ft_str_is_printable(char *str)
 {
@@ -29,12 +27,4 @@ int		ft_str_is_printable(char *str)
 		i++;
 	}
 	return (prtb);
-}
-
-int		main(void)
-{
-	char *str;
-
-	ft_putnbr(ft_str_is_printable(str));
-	return (0);
 }

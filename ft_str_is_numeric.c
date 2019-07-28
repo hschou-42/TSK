@@ -6,11 +6,9 @@
 /*   By: hschou <hschou@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 00:14:12 by hschou            #+#    #+#             */
-/*   Updated: 2019/07/19 00:22:48 by hschou           ###   ########.fr       */
+/*   Updated: 2019/07/24 11:17:00 by hschou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-void	ft_putnbr(int nb);
 
 int		ft_str_is_numeric(char *str)
 {
@@ -29,12 +27,4 @@ int		ft_str_is_numeric(char *str)
 		i++;
 	}
 	return (numeric);
-}
-
-int		main(void)
-{
-	char *str;
-
-	ft_putnbr(ft_str_is_numeric(str));
-	return (0);
 }
