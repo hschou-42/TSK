@@ -6,7 +6,7 @@
 /*   By: hschou <hschou@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 04:36:07 by hschou            #+#    #+#             */
-/*   Updated: 2019/07/31 05:23:10 by hschou           ###   ########.fr       */
+/*   Updated: 2019/07/31 05:26:39 by hschou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	brainfuck(char	*str)
 {
 	char	*ptr;
 
-	ptr = (char*)malloc(sizeof(*ptr) * (4096 + 1));
+	ptr = (char*)malloc(sizeof(*ptr) * (2048 + 1));
 	while (*str)
 	{
 		if (*str == '>')
