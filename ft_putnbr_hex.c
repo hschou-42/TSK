@@ -6,7 +6,7 @@
 /*   By: hschou <hschou@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/31 05:57:58 by hschou            #+#    #+#             */
-/*   Updated: 2019/07/31 06:11:58 by hschou           ###   ########.fr       */
+/*   Updated: 2019/07/31 06:21:11 by hschou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,4 @@ void	ft_putnbr_hex(int n)
 		ft_putnbr_hex(n / 16);
 	n = n % 16 + ((n % 16) < 10 ? '0' : 'a' - 10);
 	write(1, &n, 1);
-}
-
-int		main(void)
-{
-	int	n;
-
-	n = -2147483648;
-	ft_putnbr_hex(n);
-	return (0);
 }
