@@ -6,26 +6,23 @@
 /*   By: hschou <hschou@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 13:25:44 by hschou            #+#    #+#             */
-/*   Updated: 2019/07/27 22:29:13 by hschou           ###   ########.fr       */
+/*   Updated: 2019/07/31 06:24:59 by hschou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putnbr(int nb)
+void	ft_putnbr(int n)
 {
-	if (nb == -2147483648)
+	if (n == -2147483648)
 		write(1, "-2147483648", 11);
-	else if (nb < 0)
+	else if (n < 0)
 	{
-		ft_putchar('-');
-		nb = -nb;
+		write(1, "-", 1);
+		n *= -1;
 	}
-	if (0 <= nb && nb < 10)
-		ft_putchar('0' + nb);
-	else
-	{
-		ft_putnbr(nb / 10);
-		ft_putchar('0' + nb % 10);
-	}
+	if (10 <= n)
+		ft_putnbr(n / 10);
+	n = n % 10 + '0';
+	write(1, &n, 1);
 }
