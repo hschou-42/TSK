@@ -6,17 +6,14 @@
 /*   By: hschou <hschou@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 13:07:39 by hschou            #+#    #+#             */
-/*   Updated: 2019/07/17 20:02:27 by hschou           ###   ########.fr       */
+/*   Updated: 2019/08/01 14:28:56 by hschou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <unistd.h>
 
 void	ft_putstr(char *str)
 {
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
-		ft_putchar(str[i++]);
+	while (*str)
+		write(1, str++, 1);
 }
